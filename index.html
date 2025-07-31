@@ -101,7 +101,7 @@
 
   <section id="banner">
     <h2>La Tienda número uno del Paraguay</h2>
-    <button>Ver productos</button>
+    <button id="btn-ver-productos">Ver productos</button>
   </section>
 
   <section id="productos">
@@ -113,7 +113,7 @@
       <button>Comprar</button>
     </div>
     <div class="producto">
-      <img src="zapatillas.jpg" alt="Zapatilla MTB" />
+      <img src="zapatilla.jpg" alt="Zapatilla MTB" />
       <h4>Zapatilla MTB</h4>
       <p>$80</p>
       <button>Comprar</button>
@@ -136,8 +136,20 @@
     <p>&copy; 2025 CycleSports. Todos los derechos reservados.</p>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const boton = document.getElementById('btn-ver-productos');
+      const seccionProductos = document.getElementById('productos');
+
+      boton.addEventListener('click', function() {
+        seccionProductos.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
 </body>
 </html>
+
 
 
 
